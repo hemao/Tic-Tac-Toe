@@ -76,7 +76,7 @@ function checkWinner(){
    for(let i=0; i < winState.length; i++){
        flag = isWinner(winState[i])
        if(flag){
-            console.log("The winner is : " + winner )
+            showPlayer.innerText = "The winner is : " + winner + "!!" 
             setTimeout(reset, 500)
             break
        }

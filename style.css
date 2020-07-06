@@ -7,19 +7,18 @@ body {
     grid-template-rows: 80px 1fr 80px;
     grid-template-columns: 100px 1fr 100px;
   }
-  
-  body * {
-    background: lightgrey;
+
+  h1  {
+      background: none;
   }
   
   header {
-    background: steelblue;
+    background:white;
     grid-row: 1;
     grid-column: 1 / span 3;
-  }
+ }
   
 main {
-    background: lemonchiffon;
     grid-row: 2;
     grid-column: 2;
 }
@@ -34,19 +33,16 @@ main {
   }
   
   footer {
-    background: rebeccapurple;
     grid-row: 3;
     grid-column: 1 / span 3;
   }
   
   .left {
-    background: lightseagreen;
     grid-row: 2;
     grid-column: 1;
   }
   
   .right {
-    background: lightseagreen;
     grid-row: 2;
     grid-column: 3;
   }
@@ -55,3 +51,18 @@ main {
       background-color: white;
       border: solid 1px black;
   }
+
+  .red{
+    background-color:red;
+    border: solid 1px black;
+  }
+
+  .blue{
+    background-color:blue;
+    border: solid 1px black;
+  }
+
+  .showPlayer {
+     color:green;
+  }
+

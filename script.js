@@ -1,8 +1,8 @@
 //intilaize player and turns
-currentPlayer = "red"
-redCounter = 0
-blueCounter = 0
-
+let currentPlayer = "red"
+let redCounter = 0
+let blueCounter = 0
+let squares = [0,0,0,0,0,0,0,0,0]
 //Draw board
 let board = document.querySelector(".board")
 for(let i=0;i<9; i++){
@@ -12,13 +12,19 @@ for(let i=0;i<9; i++){
     board.appendChild(tile)
 }
 //color tile
-function selectTile(){
-    if(currentPlayer == red){
-        alert("YOU CLICKED ME!" + currentPlayer)
-        currentPlayer = "blue"
-    }else {
-        alert("YOU CLICKED ME!" + currentPlayer)
-        currentPlayer = "blue"
+function selectTile(e){
+    if(currentPlayer === "red"){
+        if(e.target.className === "tile"){
+            e.target.classList.remove("tile")
+            e.target.classList.add("red")
+            currentPlayer = "blue"
+        } 
+    } else {
+        if(e.target.className === "tile"){  
+            e.target.classList.remove("tile")
+            e.target.classList.add("blue")
+            currentPlayer = "red"
+        }
     }
 }
 
